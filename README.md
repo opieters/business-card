@@ -3,7 +3,10 @@ Business Card
 
 Example:
 
-![front side business cafd][front] ![back side business cafd][back]
+<div>
+    <img src="images/front.png" alt-="front side business card" max-width="350px;"/>
+    <img src="images/back.png" alt-="back side business card"  max-width="350px;"/>
+</div>
 
 Requirements
 ------------
@@ -29,6 +32,3 @@ License
 GNU GPLv3. See LICENSE file.
 
 © 2017 Olivier Pieters
-
-[front]: images/front.png
-[back]: images/back.png
