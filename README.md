@@ -4,8 +4,8 @@ Business Card
 Example:
 
 <div>
-    <img src="images/front.png" alt-="front side business card" width="350px;"/>
-    <img src="images/back.png" alt-="back side business card"  width="350px;"/>
+    <img src="images/front.png" alt-="front side business card" style="border: 1px solid black; max-width: 200px;"/>
+    <img src="images/back.png" alt-="back side business card"  style="border: 1px solid black; max-width: 200px;"/>
 </div>
 
 Requirements
