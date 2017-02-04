@@ -30,5 +30,5 @@ GNU GPLv3. See LICENSE file.
 
 © 2017 Olivier Pieters
 
-[front]: images/front.svg
-[back]: images/back.svg
+[front]: images/front.png
+[back]: images/back.png
