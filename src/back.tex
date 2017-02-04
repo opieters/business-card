@@ -1,0 +1,70 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,oneside,final]{article}
+
+% set all margins to 0 and set business card size
+\usepackage[paperwidth=2in,paperheight=3.5in,margin=0cm,noheadfoot]{geometry}
+\setlength{\baselineskip}{0cm}
+\setlength{\topskip}{0pt}
+
+\usepackage{parskip}         % remove paragraph indents
+\usepackage{fontspec}        % load external fonts
+\usepackage{tikz}            % drawing
+\usepackage{graphics}        % load images
+\usepackage[nolinks]{qrcode} % create QR codes
+
+% load and configure tikz libraries
+\usetikzlibrary{calc,positioning}
+
+% load external font
+\setmainfont{Fira Sans}
+\setsansfont{Fira Sans}
+\setmonofont{Fira Mono}
+
+% define some lengths for internal spacing
+\newlength{\qrheight}  \setlength{\qrheight}{1in}
+\newlength{\edgemargin} \setlength{\edgemargin}{0.2in}
+\newlength{\logowith}  \setlength{\logowith}{0.5in}
+
+% define colours
+\definecolor{bordercolour}{HTML}{357f2d} % green
+\definecolor{textcolour}{HTML}{000000}   % black
+
+% change global colour
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+\AtBeginDocument{\globalcolor{textcolour}}
+
+\begin{document}
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \begin{tikzpicture}[remember picture,overlay,inner sep=0pt]
+    \draw[fill=bordercolour!30,draw=bordercolour] (current page.center) ++(-\paperwidth/2+\edgemargin,\paperheight/2-\edgemargin) rectangle ++(\paperwidth-2*\edgemargin,-\paperheight+2*\edgemargin);
+    % logo
+    \draw (current page.center) ++(0,\paperheight/2-\edgemargin-\paperwidth/2+\edgemargin+\logowith/2) node (helper logo) {};
+    \node[anchor=north] at (helper logo) {\includegraphics[width=\logowith]{figures/logo}};
+    % qr code
+\draw (current page.center) 
+  ++(0,-\paperheight/2+\edgemargin+\paperwidth/2-\edgemargin-\qrheight/2) 
+  node (helper qr) {};
+\node[anchor=south] at (helper qr) 
+  {\qrcode[level=M,height=\qrheight]{BEGIN:VCARD
+VERSION:3.0
+N:John;Doe;;Mr.
+FN:Mr. John Doe
+TITLE:CEO Doe Enterprises
+ORG:Doe Enterprises
+PHOTO;VALUE=URI;TYPE=JPEG:https://johndoe.com/path/to/jpeg/images.jpeg
+TEL;TYPE=MOBILE:+1 781 555 1212
+EMAIL:me@johndoe.com
+URL:https://johndoe.com
+REV:2017-29-01T13:52:43Z
+BDAY:19880310
+ADR;TYPE=WORK,PREF:;;2 Some Avenue;Anytown;SF;11111;USA
+END:VCARD}};
+  \end{tikzpicture}
+  \vspace*{\fill}
+\end{document}
+

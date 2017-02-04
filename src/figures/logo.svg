@@ -1,0 +1,8 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444 450" version="1.1" >
+    <style>.style0{fill:	none;fill-rule:	evenodd;stroke-width:	10.6;}.style1{stroke:	#000000;stroke-width:	10.6;}.style2{stroke:	#020000;stroke-width:	10.6;fill:	none;}.style3{stroke:	#000000;stroke-width:	10.6;stroke-opacity:	0;}</style>
+    <g  transform="matrix(0.97174925,0,0,0.9586222,6.6498183,7.9570633)" class="style0">
+        <path d="M 270 20.4 270 3 C 270 1.9 269.1 1 268 1 L 176 1 C 174.9 1 174 1.9 174 3 l 0 444 c 0 1.1 0.9 2 2 2 l 92 0 c 1.1 0 2 -0.9 2 -2 l 0 -244.4 C 287.8 214.9 309.3 222 332.5 222 393.5 222 443 172.5 443 111.5 443 50.5 393.5 1 332.5 1 309.3 1 287.8 8.1 270 20.4 Z"  class="style1"/>
+        <circle  cx="111.5" cy="338.5" r="110.5" class="style2"/>
+        <rect  x="174" y="1" width="96" height="448" rx="2" class="style3"/>
+    </g>
+</svg>
