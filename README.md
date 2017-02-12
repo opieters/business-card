@@ -26,6 +26,15 @@ xelatex src/front.tex
 xelatex src/back.tex
 ```
 
+SVG Files
+---------
+
+LaTeX is not equipped to handle SVG files directly. A conversion to a PDF file is needed. This can be done using an external tool such as Inkscape:
+
+```shell
+inkscape --without-gui --export-area-drawing --file=logo.svg --export-pdf=logo.pdf
+```
+
 License
 -------
 
