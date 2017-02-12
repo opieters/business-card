@@ -23,7 +23,7 @@
 % define some lengths for internal spacing
 \newlength{\qrheight}  \setlength{\qrheight}{1in}
 \newlength{\edgemargin} \setlength{\edgemargin}{0.2in}
-\newlength{\logowith}  \setlength{\logowith}{0.5in}
+\newlength{\logowidth}  \setlength{\logowidth}{0.5in}
 
 % define colours
 \definecolor{bordercolour}{HTML}{357f2d} % green
@@ -43,8 +43,8 @@
   \begin{tikzpicture}[remember picture,overlay,inner sep=0pt]
     \draw[fill=bordercolour!30,draw=bordercolour] (current page.center) ++(-\paperwidth/2+\edgemargin,\paperheight/2-\edgemargin) rectangle ++(\paperwidth-2*\edgemargin,-\paperheight+2*\edgemargin);
     % logo
-    \draw (current page.center) ++(0,\paperheight/2-\edgemargin-\paperwidth/2+\edgemargin+\logowith/2) node (helper logo) {};
-    \node[anchor=north] at (helper logo) {\includegraphics[width=\logowith]{figures/logo}};
+    \draw (current page.center) ++(0,\paperheight/2-\edgemargin-\paperwidth/2+\edgemargin+\logowidth/2) node (helper logo) {};
+    \node[anchor=north] at (helper logo) {\includegraphics[width=\logowidth]{figures/logo}};
     % qr code
 \draw (current page.center) 
   ++(0,-\paperheight/2+\edgemargin+\paperwidth/2-\edgemargin-\qrheight/2) 
