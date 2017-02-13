@@ -8,6 +8,8 @@ Example:
     <img src="images/back.png" alt-="back side business card" width="200px"/>
 </div>
 
+How this business card was designed, is explained in [this blog post](https://olivierpieters.be/blog/2017/02/11/designing-a-business-card-in-latex).
+
 Requirements
 ------------
 
