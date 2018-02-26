@@ -27,6 +27,12 @@ docker run \
     /bin/bash -c 'cd /tmp/src/src ; xelatex front.tex;'
 ```
 
+Installing Dependancies on Ubuntu or Debian
+-------------------------------------------
+``` shell
+sudo apt install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+```
+
 Building Documents
 ------------------
 
